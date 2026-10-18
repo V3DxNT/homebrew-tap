@@ -5,20 +5,20 @@
 class Ray < Formula
   desc "A high-performance systems engineering CLI."
   homepage "https://github.com/V3DxNT/Ray"
-  version "1.0.2"
+  version "2.0.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/V3DxNT/Ray/releases/download/v1.0.2/ray_1.0.2_darwin_amd64.tar.gz"
-      sha256 "d6b43da4d6fcf1bb0aa49ee07ff5b5b777ee6a08b7da2b15283570be26df8fe7"
+      url "https://github.com/V3DxNT/Ray/releases/download/v2.0.0/ray_2.0.0_darwin_amd64.tar.gz"
+      sha256 "9bdd305cdada6a83e81ad3a2cbf5d9da9d34444ea613f0cd768e9cfa000704ba"
 
       define_method(:install) do
         bin.install "ray"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/V3DxNT/Ray/releases/download/v1.0.2/ray_1.0.2_darwin_arm64.tar.gz"
-      sha256 "a50ecf41e2da2bd35151b6cc6cb96d144387a07a0a92bc45cbfba6e3083983d9"
+      url "https://github.com/V3DxNT/Ray/releases/download/v2.0.0/ray_2.0.0_darwin_arm64.tar.gz"
+      sha256 "31adeb8b02a7b2b429b78231e36a93f0e8eb4fab27f4a0b4fdcd3a92e8ca92d6"
 
       define_method(:install) do
         bin.install "ray"
@@ -28,15 +28,15 @@ class Ray < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/V3DxNT/Ray/releases/download/v1.0.2/ray_1.0.2_linux_amd64.tar.gz"
-      sha256 "9171fa335853e27fb3ec5caf71b6f62d14a58530d6b4f29a9dbe4349f2b8f8dd"
+      url "https://github.com/V3DxNT/Ray/releases/download/v2.0.0/ray_2.0.0_linux_amd64.tar.gz"
+      sha256 "1e39ff4543113c64d3a30f7f29e5d25a86e9b6ab3f03e81ae490e31b6d7327b9"
       define_method(:install) do
         bin.install "ray"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/V3DxNT/Ray/releases/download/v1.0.2/ray_1.0.2_linux_arm64.tar.gz"
-      sha256 "671a5d655e3865c9447cd6bd4af76bdcbf5c5e1fbe18be38fdac606606b58f00"
+      url "https://github.com/V3DxNT/Ray/releases/download/v2.0.0/ray_2.0.0_linux_arm64.tar.gz"
+      sha256 "c64bcd03c94f23adb6ee34b5bc594eee4dfbc410ded15090d3fdee1475e32597"
       define_method(:install) do
         bin.install "ray"
       end
